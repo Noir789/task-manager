@@ -1,40 +1,37 @@
-
-
 ### **📌 README.md**  
 
+```md
 # 📝 Task Manager
 
-Task Manager — это простое приложение для управления задачами. Позволяет регистрироваться, входить в систему, создавать, редактировать и удалять задачи.  
+Task Manager is a simple task management application. It allows users to register, log in, create, edit, and delete tasks.  
 
-## 🚀 Функционал
-✅ Регистрация и вход (JWT-аутентификация)  
-✅ Восстановление пароля через email  
-✅ Создание, редактирование, удаление задач  
-✅ Фильтрация задач по статусу  
-✅ Редактирование профиля (email, username, пароль)  
+## 🚀 Features
+✅ User authentication (JWT)  
+✅ Password recovery via email  
+✅ Create, edit, delete tasks  
+✅ Task filtering by status  
+✅ Edit profile (email, username, password)  
 
-## 🛠️ Технологии
+## 🛠️ Technologies
 - **Backend:** Node.js, Express, MongoDB, Mongoose, JWT, bcrypt, Nodemailer  
 - **Frontend:** HTML, CSS, JavaScript (Vanilla JS)  
-- **Деплой:** Railway (бэкенд), GitHub Pages (фронтенд)  
-
 ---
 
-## 📌 Установка и запуск локально
+## 📌 Installation & Local Setup
 
-### **1️⃣ Склонировать репозиторий**
+### **1️⃣ Clone the repository**
 ```sh
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 ```
 
-### **2️⃣ Установить зависимости**
+### **2️⃣ Install dependencies**
 ```sh
 npm install
 ```
 
-### **3️⃣ Настроить `.env`**
-Создай `.env` файл в корне проекта и добавь:  
+### **3️⃣ Configure `.env` file**
+Create a `.env` file in the root directory and add:  
 ```
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
@@ -45,72 +42,51 @@ EMAIL_USER=your-email@yandex.ru
 EMAIL_PASS=your-app-password
 ```
 
-### **4️⃣ Запустить сервер**
+### **4️⃣ Start the server**
 ```sh
 npm run dev
 ```
-Сервер запустится на **http://localhost:5000**  
+The server will start at **http://localhost:5000**  
 
 ---
 
-## 📌 API Документация
+## 📌 API Documentation
 
-### **1️⃣ Аутентификация**
-| Метод | Эндпоинт | Описание |
+### **1️⃣ Authentication**
+| Method | Endpoint | Description |
 |--------|-------------|-------------|
-| `POST` | `/api/auth/register` | Регистрация нового пользователя |
-| `POST` | `/api/auth/login` | Вход в систему (получение JWT) |
-| `POST` | `/api/auth/forgot-password` | Восстановление пароля (отправка на email) |
+| `POST` | `/api/auth/register` | Register a new user |
+| `POST` | `/api/auth/login` | Log in (returns JWT token) |
+| `POST` | `/api/auth/forgot-password` | Recover password (email is sent) |
 
 ---
 
-### **2️⃣ Профиль пользователя**
-| Метод | Эндпоинт | Описание |
+### **2️⃣ User Profile**
+| Method | Endpoint | Description |
 |--------|-------------|-------------|
-| `GET` | `/api/users/profile` | Получить данные профиля |
-| `PUT` | `/api/users/profile` | Обновить email, username, пароль |
+| `GET` | `/api/users/profile` | Get user profile data |
+| `PUT` | `/api/users/profile` | Update email, username, or password |
 
 ---
 
-### **3️⃣ Управление задачами**
-| Метод | Эндпоинт | Описание |
+### **3️⃣ Task Management**
+| Method | Endpoint | Description |
 |--------|-------------|-------------|
-| `POST` | `/api/tasks` | Создать задачу |
-| `GET` | `/api/tasks` | Получить все задачи пользователя |
-| `GET` | `/api/tasks/:id` | Получить конкретную задачу |
-| `PUT` | `/api/tasks/:id` | Редактировать задачу |
-| `DELETE` | `/api/tasks/:id` | Удалить задачу |
+| `POST` | `/api/tasks` | Create a task |
+| `GET` | `/api/tasks` | Get all user tasks |
+| `GET` | `/api/tasks/:id` | Get a specific task |
+| `PUT` | `/api/tasks/:id` | Edit a task |
+| `DELETE` | `/api/tasks/:id` | Delete a task |
 
-⚠ **Все запросы (кроме аутентификации) требуют JWT-токен в `Authorization: Bearer {TOKEN}`**  
-
----
-
-## 📌 Деплой
-🔹 **Backend:** [Railway](https://railway.app/)  
-🔹 **Frontend:** [GitHub Pages](https://yourusername.github.io/task-manager-frontend)  
-
-### **API на Railway**
-```sh
-https://taskmanager-api.up.railway.app/api
-```
-
-### **Обновление фронтенда**
-В `frontend/app.js` замени API URL:
-```javascript
-const API_URL = "https://taskmanager-api.up.railway.app/api";
-```
+⚠ **All requests (except authentication) require a JWT token in the `Authorization: Bearer {TOKEN}` header**  
 
 ---
 
-## 🎯 TODO / Возможные улучшения
-✅ Улучшенный UI (Bootstrap/Tailwind)  
-✅ Добавление категорий для задач  
-✅ Напоминания по email  
+## 🎯 TODO / Possible Improvements
+✅ Improved UI (Bootstrap/Tailwind)  
+✅ Task categories  
+✅ Email reminders  
 
----
 
-## 📌 Автор
-👨‍💻 **Your Name**  
-📧 **your-email@example.com**  
-🔗 **[GitHub](https://github.com/your-username)**  
+ 
 
