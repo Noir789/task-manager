@@ -1,6 +1,5 @@
 ### **📌 README.md**  
 
-```md
 # 📝 Task Manager
 
 Task Manager is a simple task management application. It allows users to register, log in, create, edit, and delete tasks.  
